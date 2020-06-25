@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    
+
+    <title>Movie House</title>
+  </head>
+  <body style="background-color: black; color: white;">
+<header class="d-block">
+<h1 style="background-color: #00bab1;
+  color: black;
+  padding-top: 0.8rem;
+  border-width: 1px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;" class="d-block w-100">Your Movie recommnedations  {%if(movie!='')%} for {{movie}} {%endif%} are right here!!!!</h1>
+</header>
+<div class="d-block">
+    <table style="font-size: 20px; padding-top: 150px;" class="d-block w-100"> 
+
+      <tr style="padding: 50px;">
+        <td style="padding: 50px;font-weight: bold;margin-left: 250px;">{{list[0]}}</td>
+        <td style="padding: 50px;font-weight: bold;">{{list[1]}}</td>
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[2]}}</td> -->
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[3]}}</td> -->
+      </tr>
+      <tr style="padding: 50px;">
+        <td style="padding: 50px;font-weight: bold;margin-left: 250px;">{{list[2]}}</td>
+        <td style="padding: 50px;font-weight: bold;">{{list[3]}}</td>
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[6]}}</td> -->
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[7]}}</td> -->
+      </tr>
+      <tr style="padding: 50px;">
+        <td style="padding: 50px;font-weight: bold;margin-left: 250px;">{{list[4]}}</td>
+        <td style="padding: 50px;font-weight: bold;">{{list[5]}}</td>
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[10]}}</td> -->
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[11]}}</td> -->
+      </tr>
+    <tr style="padding: 50px;">
+        <td style="padding: 50px;font-weight: bold; margin-left: 250px;">{{list[6]}}</td>
+        <td style="padding: 50px;font-weight: bold;">{{list[7]}}</td>
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[14]}}</td> -->
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[15]}}</td> -->
+      </tr>
+      <tr style="padding: 50px;">
+        <td style="padding: 50px;font-weight: bold;margin-left: 250px;">{{list[8]}}</td>
+        <td style="padding: 50px;font-weight: bold;">{{list[9]}}</td>
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[18]}}</td> -->
+        <!-- <td style="padding: 50px;font-weight: bold;">{{list[19]}}</td> -->
+      </tr>
+    </table>
+    </div>
+<hr style="color: white">
+<div align="center">
+   <form action="{{url_for('home')}}" method="POSTtoHOME">
+   <label class="d-block" style="text-align: center; font-size: 25px; font-weight: bold;">Click here to return back...</label><br>
+  <input type="submit" value="Home" class="d-block" style="text-align: center; color: black border-style: none;
+  border-radius: 3rem;
+  margin-left: 45%;
+  margin-right: 50%;
+  margin-bottom: 25px;
+  margin-top: 25px; 
+  height: 50px;
+  font-size: 25px;
+  outline: none;
+  font-weight: bold;
+  background-color: #00bab1;">
+</form>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
