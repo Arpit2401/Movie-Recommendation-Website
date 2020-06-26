@@ -70,11 +70,4 @@ sm_df['keywords'] = sm_df['keywords'].apply(lambda x: [str.lower(i.replace(" ", 
 
 sm_df['soup'] = sm_df['keywords'] + sm_df['cast'] + sm_df['director'] + sm_df['genres']
 sm_df['soup'] = sm_df['soup'].apply(lambda x: ' '.join(x))
-
-count = CountVectorizer()
-count_matrix = count.fit_transform(sm_df['soup'])
-cosine_sim = cosine_similarity(count_matrix, count_matrix)
-cos_sim=open("cosine_sim_file",'ab')
-pickle.dump(cosine_sim,cos_sim)
-cos_sim.close()
 sm_df.to_pickle('dataframe.pkl')
