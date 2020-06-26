@@ -18,8 +18,9 @@ def home():
 
 def predict():
     sm_df=pd.read_pickle('dataframe.pkl')
-    cos_sim=open('cosine_sim_file','rb')
-    cosine_sim=pickle.load(cos_sim)
+    count = CountVectorizer()
+    count_matrix = count.fit_transform(sm_df['soup'])
+    cosine_sim = cosine_similarity(count_matrix, count_matrix)
     sm_df = sm_df.reset_index()
     titles = sm_df['title']
     indices = pd.Series(sm_df.index, index=sm_df['title'])
